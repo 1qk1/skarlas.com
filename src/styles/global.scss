@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+@import "/node_modules/normalize.css/normalize.css";
+
+html,
+body,
+#___gatsby,
+#___gatsby > div {
+  height: 100%;
+}
+
+html body {
+  font-family: "Lato", sans-serif !important;
+  color: #fff;
+}
