@@ -1,6 +1,6 @@
 ---
 title: This is my second markdown project
-image: img/coffee.jpg
+image: coffee.jpg
 github: https://github.com/
 url: https://example.com
 ---
