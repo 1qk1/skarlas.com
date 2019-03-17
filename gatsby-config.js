@@ -9,12 +9,30 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `project-files`,
+        path: `${__dirname}/src/pages/projects/markdown`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        commonmark: true,
+        footnotes: true,
+        pedantic: true,
+        gfm: true,
+        plugins: [],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -28,6 +46,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    `gatsby-plugin-netlify-cms`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

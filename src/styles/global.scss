@@ -1,15 +1,58 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
-
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900");
 @import "/node_modules/normalize.css/normalize.css";
 
 html,
 body,
 #___gatsby,
 #___gatsby > div {
-  height: 100%;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
-html body {
-  font-family: "Lato", sans-serif !important;
-  color: #fff;
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #111;
+  // font-size: 17px;
+  line-height: 1.4;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 2.25rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  width: 98%;
+  margin: auto;
+  @media (max-width: 950px) {
+    width: 90%;
+  }
+}
+
+.container-fluid {
+  width: 98%;
+  margin: 0 auto;
 }

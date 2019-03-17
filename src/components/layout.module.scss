@@ -1,0 +1,11 @@
+main {
+  height: 100%;
+}
+main > div,
+main > div > div {
+  height: 100%;
+  // overflow: hidden;
+}
+main > div {
+  position: relative;
+}

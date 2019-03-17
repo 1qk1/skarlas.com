@@ -1,10 +1,10 @@
 export default {
   particles: {
     number: {
-      value: 50,
+      value: 30,
       density: {
         enable: true,
-        value_area: 600,
+        value_area: 800,
       },
     },
     color: {
@@ -68,7 +68,7 @@ export default {
     },
   },
   interactivity: {
-    detect_on: "canvas",
+    detect_on: "window",
     events: {
       onhover: {
         enable: true,

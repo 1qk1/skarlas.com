@@ -2,9 +2,10 @@ header {
   background: #efebd8;
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  z-index: -1;
   & > div {
     height: 100%;
   }

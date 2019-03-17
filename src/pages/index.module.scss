@@ -1,0 +1,20 @@
+span {
+  display: block;
+}
+
+.hero {
+  width: 100%;
+  max-width: 500px;
+  transform: translateY(-50%);
+  &Title {
+    text-align: center;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}

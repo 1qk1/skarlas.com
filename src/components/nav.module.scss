@@ -1,0 +1,49 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  background-color: rgba($color: #efebd8, $alpha: 0.9);
+  @media (max-width: 850px) {
+    position: sticky;
+  }
+  * {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .brandLogo {
+    display: inline-block;
+  }
+  .container {
+    display: flex;
+    // padding: 0.5rem 0;
+    // background-color: cyan;
+  }
+  .container > div {
+    flex: 1;
+    text-align: center;
+  }
+  a,
+  a:active,
+  a:focus,
+  a:hover {
+    display: inline-block;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .navLinks a {
+    font-size: 0.9rem;
+    margin: 1rem;
+    line-height: 1.5;
+    // padding: 0 1px;
+    border-bottom: 1px solid transparent;
+    &:hover {
+      border-bottom: 1px solid #000;
+    }
+  }
+}

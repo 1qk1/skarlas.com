@@ -1,0 +1,33 @@
+.pageSlider {
+  transition: all 480ms cubic-bezier(0.78, 0.06, 0.6, 0.7);
+  width: 100%;
+}
+.pageSliderLeft-enter {
+  transform: translate3d(100%, 0, 0);
+}
+.pageSliderLeft-enter.pageSliderLeft-enter-active {
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+}
+.pageSliderLeft-exit {
+  transform: translate3d(0, 0, 0);
+}
+.pageSliderLeft-exit.pageSliderLeft-exit-active {
+  transform: translate3d(-100%, 0, 0);
+  position: absolute;
+}
+
+.pageSliderRight-enter {
+  transform: translate3d(-100%, 0, 0);
+}
+.pageSliderRight-enter.pageSliderRight-enter-active {
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+}
+.pageSliderRight-exit {
+  transform: translate3d(0, 0, 0);
+}
+.pageSliderRight-exit.pageSliderRight-exit-active {
+  transform: translate3d(100%, 0, 0);
+  position: absolute;
+}
