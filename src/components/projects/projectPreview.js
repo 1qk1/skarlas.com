@@ -1,5 +1,5 @@
 import React from "react"
-import PCLasses from "../pages/projects/projects.module.scss"
+import PCLasses from "../../pages/projects/projects.module.scss"
 import Classes from "./projectPreview.module.scss"
 import Img from "gatsby-image"
 

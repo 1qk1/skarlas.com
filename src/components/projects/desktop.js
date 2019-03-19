@@ -1,6 +1,6 @@
 import React from "react"
-import Classes from "./projects.module.scss"
-import ProjectPreview from "../../components/projectPreview"
+import Classes from "../../pages/projects/projects.module.scss"
+import ProjectPreview from "./projectPreview"
 
 const desktop = ({ data, selected, onProjectHover }) => {
   return (

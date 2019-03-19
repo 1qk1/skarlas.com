@@ -1,14 +1,12 @@
 import React from "react"
+import { Redirect } from "@reach/router"
 
 import SEO from "../components/seo"
 
 const NotFoundPage = () => (
   <>
     <SEO title="404: Not found" />
-    <div style={{ position: "relative" }}>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </div>
+    <Redirect to="/" />
   </>
 )
 

@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { graphql, navigate } from "gatsby"
-import DesktopProjects from "./desktop"
-import SmallerProjects from "./smaller"
+import DesktopProjects from "../../components/projects/desktop"
+import SmallerProjects from "../../components/projects/smaller"
 
 class Projects extends Component {
   state = {
