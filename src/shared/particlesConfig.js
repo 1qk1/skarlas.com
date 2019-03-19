@@ -26,12 +26,12 @@ export default {
       },
     },
     opacity: {
-      value: 0.5,
+      value: 0.2,
       random: false,
       anim: {
         enable: true,
-        speed: 1,
-        opacity_min: 0.1,
+        speed: 0.02,
+        opacity_min: 0.15,
         sync: false,
       },
     },
@@ -49,7 +49,7 @@ export default {
       enable: true,
       distance: 150,
       color: "#777",
-      opacity: 0.4,
+      opacity: 0.25,
       width: 1,
     },
     move: {
@@ -83,14 +83,14 @@ export default {
       grab: {
         distance: 140,
         line_linked: {
-          opacity: 1,
+          opacity: 0.25,
         },
       },
       bubble: {
         distance: 400,
         size: 40,
         duration: 2,
-        opacity: 8,
+        opacity: 4,
         speed: 3,
       },
       repulse: {
