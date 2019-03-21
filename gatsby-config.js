@@ -34,6 +34,11 @@ module.exports = {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
+          // gatsby-remark-relative-images must
+          // go before gatsby-remark-images
+          {
+            resolve: `gatsby-remark-relative-images`,
+          },
           {
             resolve: "gatsby-remark-images",
             options: {

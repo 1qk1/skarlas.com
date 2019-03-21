@@ -8,10 +8,12 @@
 
 const path = require("path")
 
+const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 const { createFilePath } = require("gatsby-source-filesystem")
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   if (node.internal.type === `MarkdownRemark`) {
+    fmImagesToRelative(node)
     const { createNodeField } = actions
     const slug = createFilePath({
       node,
