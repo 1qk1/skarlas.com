@@ -3,14 +3,14 @@ backend:
   repo: "1qk1/portfolio-test"
 
 media_folder: src/images
-public_folder: /images
+#public_folder: /images
 
 collections:
   - name: projects
     label: Projects
     folder: "src/pages/projects/markdown/{{slug}}"
     create: true
-    slug: "{{slug}}"
+    slug: "{{slug}}/index.md"
     fields:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
