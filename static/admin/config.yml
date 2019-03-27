@@ -8,7 +8,7 @@ public_folder: /images
 collections:
   - name: projects
     label: Projects
-    folder: src/pages/projects/markdown
+    folder: "src/pages/projects/markdown/{{slug}}"
     create: true
     slug: "{{slug}}"
     fields:
