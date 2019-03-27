@@ -8,7 +8,7 @@ media_folder: src/images
 collections:
   - name: projects
     label: Projects
-    folder: "src/pages/projects/markdown/{{slug}}"
+    folder: src/pages/projects/markdown/
     create: true
     slug: "{{slug}}/index.md"
     fields:
