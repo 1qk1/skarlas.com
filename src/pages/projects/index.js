@@ -48,13 +48,7 @@ export const projectsQuery = graphql`
             title
             url
             github
-            image {
-              childImageSharp {
-                fluid(maxHeight: 1000) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+            image
           }
         }
       }

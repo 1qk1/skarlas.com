@@ -1,7 +1,7 @@
 import React from "react"
 import PCLasses from "../../pages/projects/projects.module.scss"
 import Classes from "./projectPreview.module.scss"
-import Img from "gatsby-image"
+import Img from "react-image"
 
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa"
 
@@ -12,7 +12,7 @@ const projectPreview = ({ edges, selected }) => {
         <>
           <Img
             style={{ height: "100%" }}
-            fluid={edges[selected].node.frontmatter.image.childImageSharp.fluid}
+            src={edges[selected].node.frontmatter.image}
           />
           <div className={Classes.previewButtons}>
             <a

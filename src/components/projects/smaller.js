@@ -23,9 +23,7 @@ const smaller = ({ data }) => {
                       <div className={Classes.projectImage}>
                         <Img
                           className={Classes.projectImage}
-                          fluid={
-                            edge.node.frontmatter.image.childImageSharp.fluid
-                          }
+                          src={edge.node.frontmatter.image}
                         />
                       </div>
                       <h3 className={Classes.projectTitle}>
