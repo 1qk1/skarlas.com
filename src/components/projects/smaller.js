@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import Classes from "../../pages/projects/projects.module.scss"
+import Classes from "../../pages/projects.module.scss"
 import Img from "gatsby-image"
 
 const smaller = ({ data }) => {

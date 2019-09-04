@@ -1,5 +1,5 @@
 import React from "react"
-import Classes from "../../pages/projects/projects.module.scss"
+import Classes from "../../pages/projects.module.scss"
 import ProjectPreview from "./projectPreview"
 
 const desktop = ({ posts, images, selected, onProjectHover }) => {
