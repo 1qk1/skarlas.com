@@ -6,6 +6,16 @@ import SmallerProjects from "../../components/projects/smaller"
 class Projects extends Component {
   state = {
     selected: null,
+    width: window.innerWidth,
+  }
+
+  componentDidMount() {
+    window.onresize = event => {
+      this.setState(() => ({ width: window.innerWidth }))
+    }
+  }
+  componentWillUnmount() {
+    window.onresize = null
   }
 
   onProjectHover = projectIndex => {
@@ -19,16 +29,20 @@ class Projects extends Component {
   }
 
   render() {
-    const { data } = this.props
+    const { data, images } = this.props.data
     return (
       <div>
         {/* data, selected, onProjectHover */}
-        <DesktopProjects
-          data={data}
-          selected={this.state.selected}
-          onProjectHover={this.onProjectHover}
-        />
-        <SmallerProjects data={data} />
+        {this.state.width >= 850 ? (
+          <DesktopProjects
+            posts={data.edges}
+            images={images.edges}
+            selected={this.state.selected}
+            onProjectHover={this.onProjectHover}
+          />
+        ) : (
+          <SmallerProjects posts={data.edges} />
+        )}
       </div>
     )
   }
@@ -38,7 +52,7 @@ export default Projects
 
 export const projectsQuery = graphql`
   query {
-    allMarkdownRemark {
+    data: allMarkdownRemark {
       edges {
         node {
           fields {
@@ -49,6 +63,18 @@ export const projectsQuery = graphql`
             url
             github
             image
+          }
+        }
+      }
+    }
+    images: allFile {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+              originalName
+            }
           }
         }
       }

@@ -2,14 +2,15 @@ backend:
   name: github
   repo: "1qk1/portfolio-test"
 
-media_folder: src/images
-#public_folder: /images
+media_folder: static/assets
+public_folder: assets
 
 collections:
   - name: projects
-    label: Projects
-    folder: src/pages/projects/markdown/
-    slug: "{{slug}}"
+    label: Project
+    folder: "content"
+    slug: "{{slug}}.md"
+    create: true
     fields:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }

@@ -21,10 +21,12 @@ const smaller = ({ data }) => {
                       to={edge.node.fields.slug}
                     >
                       <div className={Classes.projectImage}>
-                        <Img
+                        {/* <Img
                           className={Classes.projectImage}
-                          src={edge.node.frontmatter.image}
-                        />
+                          fluid={
+                            edge.node.frontmatter.image.childImageSharp.fluid
+                          }
+                        /> */}
                       </div>
                       <h3 className={Classes.projectTitle}>
                         {edge.node.frontmatter.title}

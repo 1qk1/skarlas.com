@@ -11,7 +11,7 @@ const timeout = 500
 class Transition extends PureComponent {
   prevLocation = null
 
-  componentWillUpdate() {
+  componentDidUpdate() {
     const oldLocation = this.props.location.pathname
     if (oldLocation !== this.prevLocation) {
       this.prevLocation = oldLocation
