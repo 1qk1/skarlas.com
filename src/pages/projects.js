@@ -22,8 +22,8 @@ class Projects extends Component {
     if (this.state.selected !== projectIndex) {
       this.setState({ selected: projectIndex })
     } else {
-      const navigateTo = this.props.data.allMarkdownRemark.edges[projectIndex]
-        .node.fields.slug
+      const navigateTo = this.props.data.data.edges[projectIndex].node.fields
+        .slug
       navigate(navigateTo)
     }
   }

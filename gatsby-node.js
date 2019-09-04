@@ -17,9 +17,10 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       node,
       getNode,
     })
-    const newImgURL = RegExp(`([a-zA-Z0-9_.-])+(\.\w+)$`, "gi").exec(
+    const newImgURL = RegExp(/([a-zA-Z0-9_.-])+(\.\w+)$/, "gi").exec(
       node.frontmatter.image
     )[0]
+    console.log(newImgURL, "NEWIMGURL")
     node.frontmatter.image = newImgURL
     createNodeField({
       node,
@@ -46,6 +47,7 @@ exports.createPages = ({ graphql, actions }) => {
   `).then(result => {
     if (!result.data.allMarkdownRemark) return
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      console.log("creating page with slug", node.fields.slug)
       createPage({
         path: node.fields.slug,
         component: path.resolve("./src/templates/project/project.js"),
