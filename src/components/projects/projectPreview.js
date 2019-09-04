@@ -14,7 +14,7 @@ const projectPreview = ({ posts, selected, images }) => {
           if (image.node.childImageSharp === null) return false
           return (
             image.node.childImageSharp.fluid.originalName ===
-            post.node.frontmatter.image[0]
+            post.node.frontmatter.image
           )
         })[0]
 
