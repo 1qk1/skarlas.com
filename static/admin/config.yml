@@ -14,6 +14,14 @@ collections:
     fields:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
+      - {
+          name: order,
+          label: Order,
+          widget: number,
+          default: 0,
+          valueType: int,
+          min: 0,
+        }
       - { name: image, label: Image, widget: image }
       - { name: body, label: Body, widget: markdown }
       - { name: github, label: Github }
