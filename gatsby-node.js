@@ -47,7 +47,6 @@ exports.createPages = ({ graphql, actions }) => {
   `).then(result => {
     if (!result.data.allMarkdownRemark) return
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      console.log("creating page with slug", node.fields.slug)
       createPage({
         path: node.fields.slug,
         component: path.resolve("./src/templates/project/project.js"),
