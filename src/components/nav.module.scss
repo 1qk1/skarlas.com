@@ -17,8 +17,6 @@ nav {
   }
   .container {
     display: flex;
-    // padding: 0.5rem 0;
-    // background-color: cyan;
   }
   .container > div {
     flex: 1;
@@ -35,14 +33,14 @@ nav {
     text-transform: uppercase;
     letter-spacing: 1px;
   }
-
   .navLinks a {
     font-size: 0.9rem;
     margin: 1rem;
     line-height: 1.5;
-    // padding: 0 1px;
     border-bottom: 1px solid transparent;
-    &:hover {
+    transition: border-bottom 0.06s ease-in;
+    &:hover,
+    &[aria-current="page"] {
       border-bottom: 1px solid #000;
     }
   }
