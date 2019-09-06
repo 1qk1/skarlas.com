@@ -31,7 +31,7 @@ class Projects extends Component {
   render() {
     const { data, images } = this.props.data
     return (
-      <div>
+      <div className="page__content">
         {/* data, selected, onProjectHover */}
         {this.state.width >= 850 ? (
           <DesktopProjects

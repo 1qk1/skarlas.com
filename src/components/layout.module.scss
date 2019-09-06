@@ -2,7 +2,7 @@ main {
   height: 100%;
 }
 main > div,
-main > div > div {
+.page__content {
   height: 100%;
   // overflow: hidden;
 }

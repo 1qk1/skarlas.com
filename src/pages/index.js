@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import Classes from "./index.module.scss"
 
 const IndexPage = () => (
-  <div>
+  <div className="page__content">
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <div className={`container ${Classes.container}`}>
       <div className={Classes.hero}>

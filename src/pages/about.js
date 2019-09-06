@@ -18,7 +18,7 @@ const About = () => (
       }
     `}
     render={data => (
-      <div>
+      <div className="page__content">
         <div className={`container ${Classes.row}`}>
           <div className={[Classes.flexItem, Classes.aboutImage].join(" ")}>
             <Img
