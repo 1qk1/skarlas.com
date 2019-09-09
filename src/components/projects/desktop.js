@@ -2,7 +2,7 @@ import React from "react"
 import Classes from "../../pages/projects.module.scss"
 import ProjectPreview from "./projectPreview"
 
-const desktop = ({ posts, images, selected, onProjectHover }) => {
+const desktop = ({ posts, images, selected, onProjectClick }) => {
   return (
     <div style={{ height: "100%" }} className={Classes.projectsDesktop}>
       <div
@@ -17,7 +17,7 @@ const desktop = ({ posts, images, selected, onProjectHover }) => {
             {posts.map((post, index) => (
               <li
                 key={`projectPreview-${index}`}
-                onClick={() => onProjectHover(index)}
+                onClick={() => onProjectClick(index)}
                 className={selected === index ? Classes.selected : null}
               >
                 <h2 className={Classes.projectTitle}>
