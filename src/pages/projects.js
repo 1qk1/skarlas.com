@@ -6,19 +6,21 @@ import SmallerProjects from "../components/projects/smaller"
 class Projects extends Component {
   state = {
     selected: null,
-    width: window.innerWidth,
+    width: 1000,
   }
 
   componentDidMount() {
+    this.setState(() => ({ width: window.innerWidth }))
     window.onresize = event => {
       this.setState(() => ({ width: window.innerWidth }))
     }
   }
+
   componentWillUnmount() {
     window.onresize = null
   }
 
-  onProjectHover = projectIndex => {
+  onProjectClick = projectIndex => {
     if (this.state.selected !== projectIndex) {
       this.setState({ selected: projectIndex })
     } else {
@@ -32,13 +34,13 @@ class Projects extends Component {
     const { data, images } = this.props.data
     return (
       <div className="page__content">
-        {/* data, selected, onProjectHover */}
+        {/* data, selected, onProjectClick */}
         {this.state.width >= 850 ? (
           <DesktopProjects
             posts={data.edges}
             images={images.edges}
             selected={this.state.selected}
-            onProjectHover={this.onProjectHover}
+            onProjectClick={this.onProjectClick}
           />
         ) : (
           <SmallerProjects posts={data.edges} />
