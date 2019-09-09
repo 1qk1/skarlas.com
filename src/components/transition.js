@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react"
+import React, { Component } from "react"
 import {
   TransitionGroup,
   CSSTransition as ReactTransition,
@@ -8,10 +8,13 @@ import "./transition.scss"
 
 const timeout = 500
 
-class Transition extends PureComponent {
-  prevLocation = null
+class Transition extends Component {
+  // we don't need this as state because we need this
+  // only as a helper and we don't want to trigger an update
+  prevLocation = this.props.location.pathname
 
   componentDidUpdate() {
+    // every time the route changes update the previous location
     const oldLocation = this.props.location.pathname
     if (oldLocation !== this.prevLocation) {
       this.prevLocation = oldLocation
@@ -19,6 +22,7 @@ class Transition extends PureComponent {
   }
 
   transitionSide = () => {
+    // choose the side of the transition
     const { location: loc } = this.props
     const { prevLocation } = this
     const location = loc.pathname
@@ -44,7 +48,7 @@ class Transition extends PureComponent {
         <ReactTransition
           mountOnEnter={true}
           unmountOnExit={true}
-          key={location.pathname.replace(/\//g, "")}
+          key={location.pathname}
           timeout={timeout}
           classNames={`pageSlider ${transitionSide}`}
         >
