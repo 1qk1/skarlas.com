@@ -4,6 +4,9 @@
 
   transform: translateY(100%);
   animation: center 0.4s ease-in-out 0.55s forwards;
+  @media (max-width: 850px) {
+    animation: none;
+  }
   flex: 1 1 60%;
 }
 
