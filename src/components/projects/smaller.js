@@ -3,38 +3,42 @@ import { Link } from "gatsby"
 import Classes from "../../pages/projects.module.scss"
 import Img from "gatsby-image"
 
-const smaller = ({ data }) => {
+const smaller = ({ posts, images }) => {
+  // get posts
+  // get images
+  const imgObj = {}
+  images.forEach(image => {
+    if (image.node.childImageSharp) {
+      imgObj[image.node.childImageSharp.fluid.originalName] =
+        image.node.childImageSharp.fluid
+    }
+  })
   return (
     <div className={Classes.projectsSmaller}>
       <div className={["row", Classes.row, "container"].join(" ")}>
         <div className={Classes.projectList}>
           <ul>
-            {data.allMarkdownRemark.edges.map(
-              (edge, index) =>
-                console.log(edge.node.frontmatter.image) || (
-                  <li
-                    key={`projectPreview-${index}`}
-                    className={Classes.projectItem}
-                  >
-                    <Link
-                      className={Classes.projectLink}
-                      to={edge.node.fields.slug}
-                    >
-                      <div className={Classes.projectImage}>
-                        {/* <Img
-                          className={Classes.projectImage}
-                          fluid={
-                            edge.node.frontmatter.image.childImageSharp.fluid
-                          }
-                        /> */}
-                      </div>
-                      <h3 className={Classes.projectTitle}>
-                        {edge.node.frontmatter.title}
-                      </h3>
-                    </Link>
-                  </li>
-                )
-            )}
+            {posts.map((edge, index) => (
+              <li
+                key={`projectPreview-${index}`}
+                className={Classes.projectItem}
+              >
+                <Link
+                  className={Classes.projectLink}
+                  to={edge.node.fields.slug}
+                >
+                  <div className={Classes.projectImage}>
+                    <Img
+                      className={Classes.projectImage}
+                      fluid={imgObj[edge.node.frontmatter.image]}
+                    />
+                  </div>
+                  <h3 className={Classes.projectTitle}>
+                    {edge.node.frontmatter.title}
+                  </h3>
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
