@@ -43,7 +43,7 @@ class Projects extends Component {
             onProjectClick={this.onProjectClick}
           />
         ) : (
-          <SmallerProjects posts={data.edges} />
+          <SmallerProjects posts={data.edges} images={images.edges} />
         )}
       </div>
     )
