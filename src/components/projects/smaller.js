@@ -31,6 +31,10 @@ const smaller = ({ posts, images }) => {
                     <Img
                       className={Classes.projectImage}
                       fluid={imgObj[edge.node.frontmatter.image]}
+                      // vw: static image at 50vw
+                      // px: scales up and down
+                      style={{ maxHeight: "70vw" }}
+                      imgStyle={{ maxHeight: "70vw" }}
                     />
                   </div>
                   <h3 className={Classes.projectTitle}>
