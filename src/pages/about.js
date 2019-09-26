@@ -3,6 +3,7 @@ import Img from "gatsby-image"
 import { StaticQuery, graphql } from "gatsby"
 
 import Classes from "./about.module.scss"
+import FloatElement from "../components/floatElement"
 
 const About = () => (
   <StaticQuery
@@ -21,10 +22,12 @@ const About = () => (
       <div className="page__content">
         <div className={`container ${Classes.row}`}>
           <div className={[Classes.flexItem, Classes.aboutImage].join(" ")}>
-            <Img
-              style={{ maxWidth: "500px", margin: "0 auto" }}
-              fluid={data.imageOne.childImageSharp.fluid}
-            />
+            <FloatElement>
+              <Img
+                style={{ maxWidth: "500px", margin: "0 auto" }}
+                fluid={data.imageOne.childImageSharp.fluid}
+              />
+            </FloatElement>
           </div>
           <div className={Classes.flexItem}>
             <h4 className={Classes.aboutText}>
