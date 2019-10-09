@@ -2,7 +2,7 @@
 date: 2019-09-26T14:35:28.071Z
 title: Geckobnb
 order: 1
-image: /assets/index.png
+image: /assets/geckosbnb.jpg
 github: 'https://github.com/1qk1/Geckos-Team-27'
 url: '-'
 ---
