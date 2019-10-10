@@ -1,60 +1,42 @@
-import React, { Component } from "react"
-import { graphql, navigate } from "gatsby"
-import DesktopProjects from "../components/projects/desktop"
-import SmallerProjects from "../components/projects/smaller"
+import React from "react"
+import ProjectsGrid from "../components/projects/projectsGrid"
+import { graphql } from "gatsby"
 
-class Projects extends Component {
-  state = {
-    selected: null,
-    width: 1000,
-  }
+import _ from "lodash"
 
-  componentDidMount() {
-    this.setState(() => ({ width: window.innerWidth }))
-    window.onresize = event => {
-      this.setState(() => ({ width: window.innerWidth }))
+import "./projects.scss"
+
+const projects = ({ data }) => {
+  const { posts, images } = data
+  const imgObj = {}
+
+  images.edges.forEach(image => {
+    if (image.node.childImageSharp) {
+      imgObj[image.node.childImageSharp.fluid.originalName] =
+        image.node.childImageSharp.fluid
     }
-  }
+  })
 
-  componentWillUnmount() {
-    window.onresize = null
-  }
+  const postsWithImages = posts.edges.map(post => {
+    const newPost = _.cloneDeep(post)
+    newPost.node.frontmatter.image = imgObj[post.node.frontmatter.image]
+    return newPost
+  })
 
-  onProjectClick = projectIndex => {
-    if (this.state.selected !== projectIndex) {
-      this.setState({ selected: projectIndex })
-    } else {
-      const navigateTo = this.props.data.data.edges[projectIndex].node.fields
-        .slug
-      navigate(navigateTo)
-    }
-  }
-
-  render() {
-    const { data, images } = this.props.data
-    return (
-      <div className="page__content">
-        {/* data, selected, onProjectClick */}
-        {this.state.width >= 850 ? (
-          <DesktopProjects
-            posts={data.edges}
-            images={images.edges}
-            selected={this.state.selected}
-            onProjectClick={this.onProjectClick}
-          />
-        ) : (
-          <SmallerProjects posts={data.edges} images={images.edges} />
-        )}
+  return (
+    <div className="page__content">
+      <div className="gridWrapper">
+        <ProjectsGrid posts={postsWithImages} />
       </div>
-    )
-  }
+    </div>
+  )
 }
 
-export default Projects
+export default projects
 
 export const projectsQuery = graphql`
   query {
-    data: allMarkdownRemark(
+    posts: allMarkdownRemark(
       sort: { fields: [frontmatter___order, frontmatter___date], order: ASC }
     ) {
       edges {
