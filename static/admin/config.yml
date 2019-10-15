@@ -22,7 +22,10 @@ collections:
           valueType: int,
           min: 0,
         }
-      - { name: image, label: Image, widget: image }
-      - { name: body, label: Body, widget: markdown }
+      - { name: description, label: Description }
+      - { name: type, label: Type }
+      - { name: technologies, label: Technologies Used }
       - { name: github, label: Github }
       - { name: url, label: URL }
+      - { name: image, label: Image, widget: image }
+      - { name: body, label: Body, widget: markdown }
