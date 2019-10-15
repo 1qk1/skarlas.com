@@ -6,15 +6,8 @@ description: >-
   An open source productivity platform with multiple tools like pomodoro and
   trello boards.
 type: Full stack web development
-technologies:
-  - JavaScript
-  - React.js
-  - Node.js
-  - Express
-  - MongoDB
-  - JWT
-github: 'https://github.com/1qk1/productivity-platform'
-url: 'https://prodappxyz.herokuapp.com/'
+github: "https://github.com/1qk1/productivity-platform"
+url: "https://prodappxyz.herokuapp.com/"
 image: /assets/prodapp.png
 ---
 
