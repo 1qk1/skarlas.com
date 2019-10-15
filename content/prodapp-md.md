@@ -13,6 +13,7 @@ technologies:
   - Express
   - MongoDB
   - JWT
+  - Test
 github: 'https://github.com/1qk1/productivity-platform'
 url: 'https://prodappxyz.herokuapp.com/'
 image: /assets/prodapp.png
