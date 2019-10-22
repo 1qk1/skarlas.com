@@ -1,6 +1,6 @@
 import React from "react"
 
-const floatElement = ({ children }) => {
+const FloatElement = ({ children }) => {
   console.log("rendered floatElement")
   let floatDiv = React.createRef()
   const floating = event => {
@@ -35,4 +35,4 @@ const floatElement = ({ children }) => {
   )
 }
 
-export default floatElement
+export default FloatElement
