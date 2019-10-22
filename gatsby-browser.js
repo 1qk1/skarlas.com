@@ -11,6 +11,7 @@ import "./src/styles/global.scss"
 import React from "react"
 import Layout from "./src/components/layout"
 import "typeface-montserrat"
+import "typeface-work-sans"
 
 export const wrapPageElement = ({ element, props }) => {
   // props provide same data to Layout as Page element will get
