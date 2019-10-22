@@ -26,7 +26,7 @@ export default {
       },
     },
     opacity: {
-      value: 0.2,
+      value: 0.3,
       random: false,
       anim: {
         enable: true,
@@ -49,7 +49,7 @@ export default {
       enable: true,
       distance: 150,
       color: "#777",
-      opacity: 0.25,
+      opacity: 0.35,
       width: 1,
     },
     move: {
@@ -83,7 +83,7 @@ export default {
       grab: {
         distance: 140,
         line_linked: {
-          opacity: 0.25,
+          opacity: 0.35,
         },
       },
       bubble: {
