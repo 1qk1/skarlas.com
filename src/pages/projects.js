@@ -1,15 +1,12 @@
 import React from "react"
-import Carousel from "react-slick"
 import ProjectItem from "../components/projects/projectItem"
 import { graphql } from "gatsby"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
 
 import _ from "lodash"
 
-import "./projects.scss"
+import Classes from "./projects.module.scss"
 
-const projects = ({ data }) => {
+const Projects = ({ data }) => {
   const { posts, images } = data
   const imgObj = {}
 
@@ -26,29 +23,18 @@ const projects = ({ data }) => {
     return newPost
   })
 
-  const carouselSettings = {
-    dots: true,
-    infinite: true,
-    arrows: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  }
-
   return (
     <div className="page__content">
-      <div className="projectsWrapper">
-        <Carousel {...carouselSettings}>
-          {postsWithImages.map((post, index) => (
-            <ProjectItem key={`post-${index}`} post={post} />
-          ))}
-        </Carousel>
+      <div className={Classes.projectsWrapper}>
+        {postsWithImages.map((post, index) => (
+          <ProjectItem key={`post-${index}`} post={post} />
+        ))}
       </div>
     </div>
   )
 }
 
-export default projects
+export default Projects
 
 export const projectsQuery = graphql`
   query {
@@ -65,6 +51,9 @@ export const projectsQuery = graphql`
             url
             github
             image
+            description
+            type
+            technologies
           }
         }
       }
@@ -73,7 +62,7 @@ export const projectsQuery = graphql`
       edges {
         node {
           childImageSharp {
-            fluid(maxWidth: 1000) {
+            fluid(maxWidth: 300) {
               ...GatsbyImageSharpFluid
               originalName
             }
