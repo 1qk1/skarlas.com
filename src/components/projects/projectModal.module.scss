@@ -1,0 +1,71 @@
+.modalContainer {
+  width: 90vw;
+  max-width: 1000px;
+  display: flex;
+  min-height: 30rem;
+  font-family: "Work Sans";
+
+  .projectImage {
+    background-color: #333;
+    width: 60%;
+    .slider {
+      width: 100%;
+    }
+    .imageContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  }
+  .controlIcon {
+    vertical-align: top;
+    margin-right: 0.25rem;
+  }
+
+  .projectInfo {
+    width: 40%;
+    padding: 1rem;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    // letter-spacing: -0.5px;
+    justify-content: space-between;
+
+    &__title {
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      font-family: "Montserrat";
+    }
+
+    &__tech {
+      color: #ddd;
+      margin-bottom: 1rem;
+    }
+
+    &__techItem {
+      display: inline-block;
+      margin: 0.25rem;
+      padding: 0.25rem 0.5rem;
+      border: 1px solid #000;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+
+    &__body {
+      flex: 1;
+      margin-bottom: 1rem;
+      .projectInfo__description {
+        max-height: 250px;
+        overflow-y: auto;
+      }
+    }
+    &__footer {
+      padding: 0.5rem 0;
+      .projectLink {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
