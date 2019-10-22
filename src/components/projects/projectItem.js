@@ -1,25 +1,39 @@
-import React from "react"
+import React, { useState } from "react"
 import Img from "gatsby-image"
-import { Link } from "@reach/router"
 
-import "./projectItem.scss"
+import Classes from "./projectItem.module.scss"
 
-const projectItem = ({ post, className }) => {
+import { IoIosEye } from "react-icons/io"
+import ProjectModal from "./projectModal"
+
+const ProjectItem = ({ post }) => {
+  // return null
+  const [showModal, setShowModal] = useState(false)
+
+  const closeModal = () => {
+    setShowModal(false)
+  }
+
+  const openModal = () => {
+    setShowModal(true)
+  }
+
   return (
-    <div className={className}>
-      <Link to={post.node.fields.slug}>
-        <div className="controlsWrapper">
-          <Img
-            fluid={post.node.frontmatter.image}
-            className="projectImage"
-            style={{ height: "100%" }}
-            imgStyle={{ objectPosition: "top center" }}
-          />
+    <div className={Classes.projectItem}>
+      <div className={Classes.imageContainer}>
+        <Img fluid={post.node.frontmatter.image} className={Classes.image} />
+      </div>
+      <div className={Classes.controlsContainer}>
+        <div className={Classes.controls}>
+          <button onClick={openModal}>
+            <IoIosEye className={Classes.controlIcon} size="1.5em" />
+            View Project
+          </button>
         </div>
-      </Link>
-      {/* controls div */}
+      </div>
+      <ProjectModal post={post} show={showModal} closeModal={closeModal} />
     </div>
   )
 }
 
-export default projectItem
+export default ProjectItem

@@ -1,0 +1,59 @@
+.projectItem {
+  flex: 1 0 40%;
+  max-height: 25vw;
+  height: 350px;
+  background-color: #444;
+  margin: 1rem;
+  border-radius: 2px;
+  box-shadow: 0 0 10px #0009;
+  position: relative;
+
+  &:hover {
+    .image {
+      transform: scale(1.1);
+    }
+  }
+
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .image {
+    width: 50%;
+    transition: all 0.2s;
+  }
+
+  .controlsContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.2s;
+    color: white;
+    font-weight: 700;
+    box-shadow: inset 0 0 12rem #0008;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .controls {
+    top: 80%;
+    margin: 2rem auto;
+    & > button {
+      cursor: pointer;
+    }
+  }
+  .controlIcon {
+    vertical-align: middle;
+    margin-right: 0.5rem;
+  }
+}
