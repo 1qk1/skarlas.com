@@ -16,7 +16,7 @@ technologies:
   - Test
 github: 'https://github.com/1qk1/productivity-platform'
 url: 'https://prodappxyz.herokuapp.com/'
-image: /assets/prodapp.png
+image: /assets/prodapp2.png
 ---
 
 Open source productivity platform in the making
