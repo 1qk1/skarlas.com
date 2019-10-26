@@ -13,6 +13,8 @@ technologies:
   - Mongodb
 github: 'https://github.com/1qk1/Geckos-Team-27'
 url: '-'
-image: /assets/geckosbnb2.png
+galleryImages:
+  - /assets/geckosbnb2.png
+  - /assets/geckobnb.png
 ---
 Made a full stack Airbnb clone as part of chingu's 5th cohort along with another developer, using React, Express and Mongodb.
