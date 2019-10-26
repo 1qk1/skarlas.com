@@ -8,6 +8,8 @@ technologies:
   - dfghdfghdfghdfgh
 github: 'https://github.com/1qk1/gameoflife'
 url: 'https://1qk1.github.io/gameoflife/'
-image: /assets/gameoflife-logo.png
+galleryImages:
+  - /assets/gameoflife-logo.png
+  - /assets/gameoflife.png
 ---
 Conway's game of life in react
