@@ -1,0 +1,22 @@
+.slider {
+  .slick-slide > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slick-dots {
+    object-position: bottom;
+    bottom: 0;
+    margin: 0;
+    padding-bottom: 1rem;
+  }
+  .slick-prev {
+    left: 1rem;
+    z-index: 50;
+  }
+  .slick-next {
+    right: 1rem;
+    z-index: 50;
+  }
+}
