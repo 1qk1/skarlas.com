@@ -1,19 +1,10 @@
 import React from "react"
-import Classes from "./projectModal.module.scss"
 import Img from "gatsby-image"
-import { IoIosClose, IoIosCode, IoLogoGithub } from "react-icons/io"
+import { IoIosClose, IoIosLink, IoLogoGithub } from "react-icons/io"
 import Modal from "react-modal"
-import Slider from "react-slick"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-}
+import Slider from "./slider"
+import Classes from "./projectModal.module.scss"
+import "./projectModal.scss"
 
 Modal.setAppElement("#___gatsby")
 
@@ -29,6 +20,7 @@ const customStyles = {
     border: "none",
     borderRadius: 0,
     padding: 0,
+    boxShadow: "0 0 50px #111a",
   },
   overlay: {
     backgroundColor: "rgba(0,0,0,0.5)",
@@ -37,31 +29,22 @@ const customStyles = {
 }
 
 const ProjectModal = props => {
-  console.log(props.post)
   return (
-    // backdrop
-    // project info
     <Modal
       onRequestClose={props.closeModal}
       style={customStyles}
       isOpen={props.show}
+      closeTimeoutMS={100}
     >
       <div className={Classes.modalContainer}>
         <div className={Classes.projectImage}>
-          <div className={Classes.imageContainer}>
-            <Slider {...settings} className={Classes.slider}>
-              <div>
-                <Img
-                  fluid={props.post.node.frontmatter.image}
-                  style={{ width: "50%", margin: "auto" }}
-                  imgStyle={{
-                    objectPosition: "top center",
-                    borderRadius: "2px",
-                  }}
-                />
+          <Slider>
+            {props.post.node.frontmatter.galleryImages.map((image, index) => (
+              <div className={Classes.imageContainer} key={`image-${index}`}>
+                <Img fluid={image} className={Classes.image} />
               </div>
-            </Slider>
-          </div>
+            ))}
+          </Slider>
         </div>
         <div className={Classes.projectInfo}>
           <IoIosClose
@@ -100,24 +83,22 @@ const ProjectModal = props => {
           <div className={Classes.projectInfo__footer}>
             <div className={Classes.projectLinks}>
               <a
+                className={`button ${Classes.projectLink}`}
                 href={props.post.node.frontmatter.url}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className={Classes.projectLink}>
-                  <IoIosCode className={Classes.controlIcon} size="1.25em" />
-                  URL
-                </button>
+                <IoIosLink className={Classes.controlIcon} size="1.25em" />
+                URL
               </a>
               <a
+                className={`button ${Classes.projectLink}`}
                 href={props.post.node.frontmatter.github}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className={Classes.projectLink}>
-                  <IoLogoGithub className={Classes.controlIcon} size="1.25em" />
-                  Github
-                </button>
+                <IoLogoGithub className={Classes.controlIcon} size="1.25em" />
+                Github
               </a>
             </div>
           </div>
