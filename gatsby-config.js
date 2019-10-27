@@ -6,7 +6,13 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: [`${__dirname}/src/styles`],
+        data: '@import "variables";',
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
