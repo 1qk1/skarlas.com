@@ -32,5 +32,8 @@ collections:
         }
       - { name: github, label: Github }
       - { name: url, label: URL }
-      - { name: image, label: Image, widget: image }
+      - label: "Gallery"
+        name: "galleryImages"
+        widget: "list"
+        field: { label: Image, name: image, widget: image }
       - { name: body, label: Body, widget: markdown }
