@@ -17,10 +17,10 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       node,
       getNode,
     })
-    const newImgURL = RegExp(/([a-zA-Z0-9_.-])+(\.\w+)$/, "gi").exec(
-      node.frontmatter.image
-    )[0]
-    node.frontmatter.image = newImgURL
+    const newImages = node.frontmatter.galleryImages.map(
+      image => RegExp(/([a-zA-Z0-9_.-])+(\.\w+)$/, "gi").exec(image)[0]
+    )
+    node.frontmatter.galleryImages = newImages
     createNodeField({
       node,
       name: `slug`,
