@@ -21,11 +21,14 @@ const ProjectItem = ({ post }) => {
   return (
     <div className={Classes.projectItem}>
       <div className={Classes.imageContainer}>
-        <Img fluid={post.node.frontmatter.image} className={Classes.image} />
+        <Img
+          fluid={post.node.frontmatter.galleryImages[0]}
+          className={Classes.image}
+        />
       </div>
       <div className={Classes.controlsContainer}>
         <div className={Classes.controls}>
-          <button onClick={openModal}>
+          <button className="button" onClick={openModal}>
             <IoIosEye className={Classes.controlIcon} size="1.5em" />
             View Project
           </button>
