@@ -19,13 +19,15 @@ const Projects = ({ data }) => {
 
   const postsWithImages = posts.edges.map(post => {
     const newPost = _.cloneDeep(post)
-    newPost.node.frontmatter.image = imgObj[post.node.frontmatter.image]
+    newPost.node.frontmatter.galleryImages = newPost.node.frontmatter.galleryImages.map(
+      image => imgObj[image]
+    )
     return newPost
   })
 
   return (
     <div className="page__content">
-      <div className={Classes.projectsWrapper}>
+      <div className={`container ${Classes.projectsWrapper}`}>
         {postsWithImages.map((post, index) => (
           <ProjectItem key={`post-${index}`} post={post} />
         ))}
@@ -50,7 +52,7 @@ export const projectsQuery = graphql`
             title
             url
             github
-            image
+            galleryImages
             description
             type
             technologies
@@ -62,7 +64,7 @@ export const projectsQuery = graphql`
       edges {
         node {
           childImageSharp {
-            fluid(maxWidth: 300) {
+            fluid(maxWidth: 800) {
               ...GatsbyImageSharpFluid
               originalName
             }
