@@ -1,6 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import { StaticQuery, graphql } from "gatsby"
+import { IoLogoTwitter, IoIosCall, IoIosMail } from "react-icons/io"
 
 import Classes from "./about.module.scss"
 import FloatElement from "../components/floatElement"
@@ -29,22 +30,47 @@ const About = () => (
               />
             </FloatElement>
           </div>
-          <div className={Classes.flexItem}>
-            <h4 className={Classes.aboutText}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Accusantium laboriosam quo quam quibusdam vitae fugiat sunt
-              reprehenderit distinctio perferendis quod magnam excepturi
-              tempore, sapiente aperiam! Explicabo odio neque molestiae quae
-              eius dolore? Nesciunt neque facilis dolores maiores, blanditiis
-              eius cum provident iusto cumque rerum ad. Inventore animi
-              laboriosam tenetur illum? Lorem ipsum dolor sit, amet consectetur
-              adipisicing elit. Accusantium laboriosam quo quam quibusdam vitae
-              fugiat sunt reprehenderit distinctio perferendis quod magnam
-              excepturi tempore, sapiente aperiam! Explicabo odio neque
-              molestiae quae eius dolore? Nesciunt neque facilis dolores
-              maiores, blanditiis eius cum provident iusto cumque rerum ad.
-              Inventore animi laboriosam tenetur illum?
-            </h4>
+          <div className={`${Classes.flexItem} ${Classes.aboutInfo}`}>
+            <div>
+              <h4>
+                Hi! My name is Panagiotis and I'm a frontend web developer from
+                Chalkida, Greece.
+              </h4>
+              <p>
+                Passionate about technology and learning new things, I like
+                building my ideas into code and creating beautiful stuff.
+              </p>
+            </div>
+            <div>
+              <h5>Want to work together? Contact me here!</h5>
+              <div className={Classes.contact}>
+                <a
+                  href="mailto:panossk2@gmail.com"
+                  target="__blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>
+                    <IoIosMail className={Classes.contactIcon} />{" "}
+                    panossk2@gmail.com
+                  </span>
+                </a>
+
+                <a
+                  href="https://twitter.com/qktweets"
+                  target="__blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>
+                    <IoLogoTwitter className={Classes.contactIcon} />{" "}
+                    twitter.com/qktweets
+                  </span>
+                </a>
+
+                <span>
+                  <IoIosCall className={Classes.contactIcon} /> +30 6945082981
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
