@@ -11,7 +11,7 @@ const IndexPage = () => (
         <h1 className={Classes.heroTitle}>
           <span>Hi, I'm Panagiotis,</span>
           <span>a frontend web developer.</span>
-          <span>I enjoy making beautiful things for people.</span>
+          <span>I like building things with code, electronics or both.</span>
         </h1>
       </div>
     </div>
