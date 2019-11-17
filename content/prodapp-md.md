@@ -17,7 +17,7 @@ github: 'https://github.com/1qk1/productivity-platform'
 url: 'https://prodappxyz.herokuapp.com/'
 galleryImages:
   - /assets/prodapp2.png
-  - /assets/1000.jpg
+  - /assets/prodapp-boards.png
 ---
 
 Open source productivity platform in the making
