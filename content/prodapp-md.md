@@ -4,7 +4,7 @@ title: Prodapp
 order: 0
 description: >-
   An open source productivity platform with multiple tools like pomodoro and
-  trello boards.
+  kanban boards.
 type: Full stack web development
 technologies:
   - JavaScript
