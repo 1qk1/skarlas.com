@@ -9,6 +9,7 @@
 const path = require("path")
 
 const { createFilePath } = require("gatsby-source-filesystem")
+const LoadablePlugin = require("@loadable/webpack-plugin")
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   if (node.internal.type === `MarkdownRemark`) {
@@ -54,5 +55,18 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
     })
+  })
+}
+
+exports.onCreateWebpackConfig = ({
+  stage,
+  getConfig,
+  rules,
+  loaders,
+  plugins,
+  actions,
+}) => {
+  actions.setWebpackConfig({
+    plugins: [new LoadablePlugin()],
   })
 }
