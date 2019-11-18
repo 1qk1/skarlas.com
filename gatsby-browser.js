@@ -7,6 +7,7 @@
 // You can delete this file if you're not using it
 
 import "./src/styles/global.scss"
+import "normalize.css/normalize.css"
 
 import React from "react"
 import Layout from "./src/components/layout"
