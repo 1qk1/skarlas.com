@@ -5,6 +5,10 @@ backend:
 media_folder: static/assets
 public_folder: assets
 
+backend:
+  name: git-gateway
+
+
 collections:
   - name: projects
     label: Project
