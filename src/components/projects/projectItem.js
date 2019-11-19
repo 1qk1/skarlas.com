@@ -1,13 +1,14 @@
 import React, { useState } from "react"
 import Img from "gatsby-image"
+import loadable from "@loadable/component"
 
 import Classes from "./projectItem.module.scss"
 
 import { IoIosEye } from "react-icons/io"
-import ProjectModal from "./projectModal"
+
+const AsyncModal = loadable(() => import("./projectModal"))
 
 const ProjectItem = ({ post }) => {
-  // return null
   const [showModal, setShowModal] = useState(false)
 
   const closeModal = () => {
@@ -34,7 +35,7 @@ const ProjectItem = ({ post }) => {
           </button>
         </div>
       </div>
-      <ProjectModal post={post} show={showModal} closeModal={closeModal} />
+      <AsyncModal post={post} show={showModal} closeModal={closeModal} />
     </div>
   )
 }
