@@ -50,7 +50,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Panagiotis Skarlas Portfolio`,
-        short_name: `skarlas.cc`,
+        short_name: `Panagiotis Skarlas`,
         start_url: `/`,
         background_color: `#efebd8`,
         theme_color: `#efebd8`,
