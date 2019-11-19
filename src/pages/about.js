@@ -5,6 +5,7 @@ import { IoLogoTwitter, IoIosCall, IoIosMail } from "react-icons/io"
 
 import Classes from "./about.module.scss"
 import FloatElement from "../components/floatElement"
+import SEO from "../components/seo"
 
 const About = () => (
   <StaticQuery
@@ -21,6 +22,10 @@ const About = () => (
     `}
     render={data => (
       <div className="page__content">
+        <SEO
+          title="About me"
+          keywords={[`panagiotis`, `skarlas`, `bio`, `about`]}
+        />
         <div className={`container ${Classes.row}`}>
           <div className={[Classes.flexItem, Classes.aboutImage].join(" ")}>
             <FloatElement>

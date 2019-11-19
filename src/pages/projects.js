@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 import _ from "lodash"
 
 import Classes from "./projects.module.scss"
+import SEO from "../components/seo"
 
 const Projects = ({ data }) => {
   const { posts, images } = data
@@ -27,6 +28,11 @@ const Projects = ({ data }) => {
 
   return (
     <div className="page__content">
+      <SEO
+        title="Projects"
+        keywords={[`panagiotis`, `skarlas`, `projects`, `work`]}
+      />
+
       <div className={`container ${Classes.projectsWrapper}`}>
         {postsWithImages.map((post, index) => (
           <ProjectItem key={`post-${index}`} post={post} />
