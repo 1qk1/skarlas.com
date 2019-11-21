@@ -16,5 +16,6 @@ url: '-'
 galleryImages:
   - /assets/geckosbnb2.png
   - /assets/geckobnb.png
+  - /assets/geckobnb-listings.png
 ---
 Made a full stack Airbnb clone as part of chingu's 5th cohort along with another developer, using React, Express and Mongodb.
