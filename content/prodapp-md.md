@@ -13,11 +13,14 @@ technologies:
   - Express
   - MongoDB
   - JWT
-github: "https://github.com/1qk1/productivity-platform"
-url: "https://prodapp.xyz/"
+github: 'https://github.com/1qk1/productivity-platform'
+url: 'https://prodapp.xyz/'
 galleryImages:
   - /assets/prodapp.png
   - /assets/prodapp-boards.png
+  - /assets/prodapp-pomodoro-running.png
+  - /assets/prodapp-pomodoro-break.png
+  - /assets/prodapp-store.png
 ---
 
 Open source productivity platform in the making
