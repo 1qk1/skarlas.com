@@ -14,7 +14,7 @@ technologies:
 github: "https://github.com/1qk1/Geckos-Team-27"
 url: "-"
 galleryImages:
-  - /assets/geckobnb2.png
+  - /assets/geckobnb.png
   - /assets/geckobnb-landing.png
   - /assets/geckobnb-listings.png
   - /assets/geckobnb-home.png
