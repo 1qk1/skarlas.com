@@ -53,7 +53,7 @@ module.exports = {
         short_name: `Panagiotis Skarlas`,
         start_url: `/`,
         background_color: `#efebd8`,
-        theme_color: `#333`,
+        theme_color: `#444`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
