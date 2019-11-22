@@ -9,7 +9,9 @@ class Header extends PureComponent {
     return (
       <>
         <Nav />
-        <header>{/* <Particles params={particlesConfig} /> */}</header>
+        <header>
+          <Particles params={particlesConfig} />
+        </header>
       </>
     )
   }
