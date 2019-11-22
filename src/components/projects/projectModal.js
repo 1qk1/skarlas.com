@@ -76,9 +76,9 @@ const ProjectModal = props => {
           </div>
           <div className={Classes.projectInfo__body}>
             <h4 className={Classes.projectInfo__title}>ABOUT</h4>
-            <p className={Classes.projectInfo__description}>
-              {props.post.node.frontmatter.description}
-            </p>
+            <div
+              dangerouslySetInnerHTML={{ __html: props.post.node.html }}
+            ></div>
           </div>
           <div className={Classes.projectInfo__footer}>
             <div className={Classes.projectLinks}>
