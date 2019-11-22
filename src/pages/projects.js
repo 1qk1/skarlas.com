@@ -52,9 +52,6 @@ export const projectsQuery = graphql`
       edges {
         node {
           html
-          fields {
-            slug
-          }
           frontmatter {
             title
             url
