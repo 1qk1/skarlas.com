@@ -8,7 +8,7 @@ const Nav = () => (
       <div className={Classes.navLinks}>
         <Link to="/projects">Projects</Link>
         <h3 className={Classes.brandLogo}>
-          <Link to="/">Logo</Link>
+          <Link to="/">Home</Link>
         </h3>
         <Link to="/about">About</Link>
       </div>
