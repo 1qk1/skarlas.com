@@ -2,7 +2,7 @@ import React from "react"
 import ProjectItem from "../components/projects/projectItem"
 import { graphql } from "gatsby"
 
-import _ from "lodash"
+import { cloneDeep } from "lodash"
 
 import Classes from "./projects.module.scss"
 import SEO from "../components/seo"
@@ -19,7 +19,7 @@ const Projects = ({ data }) => {
   })
 
   const postsWithImages = posts.edges.map(post => {
-    const newPost = _.cloneDeep(post)
+    const newPost = cloneDeep(post)
     newPost.node.frontmatter.galleryImages = newPost.node.frontmatter.galleryImages.map(
       image => imgObj[image]
     )
