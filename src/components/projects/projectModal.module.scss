@@ -3,10 +3,25 @@
   max-width: 90vw;
   display: flex;
   font-family: $secondary-font;
+  max-height: 45vw;
+  overflow: hidden;
+  font-size: 0.95em;
 
   .projectImage {
     background-color: $gray-dark;
     width: 60%;
+  }
+  .closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
   .slick {
     height: 100%;
@@ -18,11 +33,10 @@
 
   .projectInfo {
     width: 40%;
-    padding: 1em;
+    padding: 1.5em;
     color: #eee;
     display: flex;
     flex-direction: column;
-    // letter-spacing: -0.5px;
     justify-content: space-between;
 
     &__title {
@@ -49,9 +63,24 @@
     &__body {
       flex: 1;
       margin-bottom: 1em;
-      .projectInfo__description {
-        max-height: 250px;
-        overflow-y: auto;
+      max-height: 45vw;
+      overflow-y: auto;
+      &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: $gray-dark;
+      }
+
+      &::-webkit-scrollbar {
+        border-radius: 10px;
+        width: 8px;
+        background-color: $gray-dark;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #f5f5f5;
       }
     }
     &__footer {
@@ -63,18 +92,17 @@
     }
   }
 
-  @media (max-width: 750px) {
+  @media (max-width: 920px) {
     flex-direction: column;
+    width: 600px;
     max-width: 90vw;
-    // max-height: 80vh;
-    overflow: auto;
+    max-height: unset;
+    overflow: unset;
     .projectImage,
     .projectInfo {
       width: unset;
     }
-    .imageContainer {
-      max-height: 40vh;
-    }
+
     .projectInfo {
       overflow: auto;
       font-size: 0.9rem;

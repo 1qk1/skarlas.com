@@ -49,13 +49,7 @@ const ProjectModal = props => {
         <div className={Classes.projectInfo}>
           <IoIosClose
             size="2.5em"
-            style={{
-              position: "absolute",
-              top: 0,
-              right: 0,
-              margin: "1rem",
-              cursor: "pointer",
-            }}
+            className={Classes.closeButton}
             onClick={props.closeModal}
           />
           <div className={Classes.projectInfo__header}>
@@ -77,6 +71,7 @@ const ProjectModal = props => {
           <div className={Classes.projectInfo__body}>
             <h4 className={Classes.projectInfo__title}>ABOUT</h4>
             <div
+              className={Classes.projectInfo__description}
               dangerouslySetInnerHTML={{ __html: props.post.node.html }}
             ></div>
           </div>
