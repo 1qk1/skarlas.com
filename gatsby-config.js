@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+})
+
 const {
   NODE_ENV,
   URL: NETLIFY_SITE_URL = "https://www.example.com",
@@ -87,6 +91,30 @@ module.exports = {
             sitemap: null,
             host: null,
           },
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-amplitude-analytics`,
+      options: {
+        // Specify the API key for your Amplitude Project (required)
+        apiKey: process.env.AMPLITUDE_API_KEY,
+        // Puts tracking script in the head instead of the body (optional)
+        head: false,
+        // Prevents loading Amplitude and logging events if visitors have "Do Not Track" enabled (optional)
+        respectDNT: true,
+        // Avoids sending pageview hits from custom paths (optional)
+        exclude: ["/preview/**", "/do-not-track/me/too/"],
+        // Override the default event types (optional)
+        eventTypes: {
+          outboundLinkClick: "OUTBOUND_LINK_CLICK",
+          pageView: "PAGE_VIEW",
+        },
+        // Amplitude JS SDK configuration options (optional)
+        amplitudeConfig: {
+          saveEvents: true,
+          includeUtm: true,
+          includeReferrer: true,
         },
       },
     },
