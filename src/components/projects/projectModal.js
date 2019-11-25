@@ -4,6 +4,8 @@ import { IoIosClose, IoIosLink, IoLogoGithub } from "react-icons/io"
 import Modal from "react-modal"
 import Slider from "./slider"
 import Classes from "./projectModal.module.scss"
+import { OutboundLink } from "gatsby-plugin-amplitude-analytics"
+
 import "./projectModal.scss"
 
 Modal.setAppElement("#___gatsby")
@@ -77,7 +79,7 @@ const ProjectModal = props => {
           </div>
           <div className={Classes.projectInfo__footer}>
             <div className={Classes.projectLinks}>
-              <a
+              <OutboundLink
                 className={`button ${Classes.projectLink}`}
                 href={props.post.node.frontmatter.url}
                 target="_blank"
@@ -85,8 +87,8 @@ const ProjectModal = props => {
               >
                 <IoIosLink className={Classes.controlIcon} size="1.25em" />
                 URL
-              </a>
-              <a
+              </OutboundLink>
+              <OutboundLink
                 className={`button ${Classes.projectLink}`}
                 href={props.post.node.frontmatter.github}
                 target="_blank"
@@ -94,7 +96,7 @@ const ProjectModal = props => {
               >
                 <IoLogoGithub className={Classes.controlIcon} size="1.25em" />
                 Github
-              </a>
+              </OutboundLink>
             </div>
           </div>
         </div>

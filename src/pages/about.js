@@ -2,6 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 import { StaticQuery, graphql } from "gatsby"
 import { IoLogoTwitter, IoIosCall, IoIosMail } from "react-icons/io"
+import { OutboundLink } from "gatsby-plugin-amplitude-analytics"
 
 import Classes from "./about.module.scss"
 import FloatElement from "../components/floatElement"
@@ -49,7 +50,7 @@ const About = () => (
             <div>
               <h5>Want to work together? Contact me here!</h5>
               <div className={Classes.contact}>
-                <a
+                <OutboundLink
                   href="mailto:panossk2@gmail.com"
                   target="__blank"
                   rel="noopener noreferrer"
@@ -58,9 +59,9 @@ const About = () => (
                     <IoIosMail className={Classes.contactIcon} />{" "}
                     panossk2@gmail.com
                   </span>
-                </a>
+                </OutboundLink>
 
-                <a
+                <OutboundLink
                   href="https://twitter.com/qktweets"
                   target="__blank"
                   rel="noopener noreferrer"
@@ -69,7 +70,7 @@ const About = () => (
                     <IoLogoTwitter className={Classes.contactIcon} />{" "}
                     twitter.com/qktweets
                   </span>
-                </a>
+                </OutboundLink>
 
                 <span>
                   <IoIosCall className={Classes.contactIcon} /> +30 6945082981
