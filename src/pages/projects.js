@@ -28,10 +28,7 @@ const Projects = ({ data }) => {
 
   return (
     <div className="page__content">
-      <SEO
-        title="Projects"
-        keywords={[`panagiotis`, `skarlas`, `projects`, `work`]}
-      />
+      <SEO title="Projects" keywords={[`projects`, `work`]} />
 
       <div className={`container ${Classes.projectsWrapper}`}>
         {postsWithImages.map((post, index) => (

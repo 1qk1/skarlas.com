@@ -23,10 +23,7 @@ const About = () => (
     `}
     render={data => (
       <div className="page__content">
-        <SEO
-          title="About me"
-          keywords={[`panagiotis`, `skarlas`, `bio`, `about`]}
-        />
+        <SEO title="About me" keywords={[`bio`, `about`]} />
         <div className={`container ${Classes.row}`}>
           <div className={[Classes.flexItem, Classes.aboutImage].join(" ")}>
             <FloatElement>
