@@ -14,7 +14,7 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 module.exports = {
   siteMetadata: {
     title: `Panagiotis Skarlas`,
-    description: `Panagiotis Skarlas' personal portfolio.`,
+    description: `Passionate about computers and technology, love learning new things, producing value and writing clean code.`,
     author: `@qktweets`,
     siteUrl: `https://skarlas.cc`,
   },
