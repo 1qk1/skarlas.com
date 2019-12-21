@@ -14,7 +14,7 @@ const About = () => (
       query {
         imageOne: file(relativePath: { eq: "1000.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 1000) {
+            fluid(maxWidth: 800, quality: 90) {
               ...GatsbyImageSharpFluid
             }
           }
