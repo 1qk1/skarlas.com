@@ -14,6 +14,5 @@ github: 'https://github.com/1qk1/fusion-travel'
 url: 'https://1qk1.github.io/fusion-travel/'
 galleryImages:
   - /assets/fusiontravel.png
-  - /assets/cat.png
 ---
 Page template replica of https://freebiesbug.com/psd-freebies/fusion-website-template-travel-agencies/
