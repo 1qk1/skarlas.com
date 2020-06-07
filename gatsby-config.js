@@ -99,8 +99,8 @@ module.exports = {
       resolve: "gatsby-plugin-matomo",
       options: {
         siteId: "1",
-        matomoUrl: "//analytics.skarlas.cc",
-        siteUrl: "https://skarlas.cc",
+        matomoUrl: "//analytics.skarlas.com",
+        siteUrl: "https://skarlas.com",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
