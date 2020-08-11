@@ -16,7 +16,7 @@ module.exports = {
     title: `Panagiotis Skarlas`,
     description: `Passionate about computers and technology, love learning new things, producing value and writing clean code.`,
     author: `@qktweets`,
-    siteUrl: `https://skarlas.cc`,
+    siteUrl: `https://skarlas.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -99,8 +99,8 @@ module.exports = {
       resolve: "gatsby-plugin-matomo",
       options: {
         siteId: "1",
-        matomoUrl: "//analytics.skarlas.cc",
-        siteUrl: "https://skarlas.cc",
+        matomoUrl: "//analytics.skarlas.com",
+        siteUrl: "https://skarlas.com",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

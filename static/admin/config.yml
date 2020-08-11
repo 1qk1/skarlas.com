@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: "1qk1/skarlas.cc"
+  repo: "1qk1/skarlas.com"
 
 media_folder: static/assets
 public_folder: assets
