@@ -68,9 +68,11 @@ const About = () => (
                   </span>
                 </a>
 
-                <span>
-                  <IoIosCall className={Classes.contactIcon} /> +30 6945082981
-                </span>
+                <a
+                  href="tel:+30 6945082981"
+                >
+                <IoIosCall className={Classes.contactIcon} />
+                +30 6945082981</a>
               </div>
             </div>
           </div>
