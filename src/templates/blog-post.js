@@ -2,7 +2,6 @@ import React from "react"
 
 const Blog = (data) => {
   const pageData = data.pageContext
-  console.log(pageData)
   return (
     <div className="page__content" style={{marginTop: "5rem"}}>
       <div className="container">

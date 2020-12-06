@@ -4,7 +4,6 @@ import { graphql, Link } from "gatsby"
 
 const Blog = ({ data }) => {
   const posts = data.allPrismicBlogPost.edges
-  console.log(posts)
   return (
     <div className="page__content mt-5" style={{marginTop: "5rem"}}>
       <div className="container">

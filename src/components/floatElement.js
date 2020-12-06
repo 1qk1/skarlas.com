@@ -1,7 +1,6 @@
 import React from "react"
 
 const FloatElement = ({ children }) => {
-  console.log("rendered floatElement")
   let floatDiv = React.createRef()
   const floating = event => {
     // get mouse position
