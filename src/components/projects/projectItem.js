@@ -8,7 +8,7 @@ import { IoIosEye } from "react-icons/io"
 
 const AsyncModal = loadable(() => import("./projectModal"))
 
-const ProjectItem = ({ post }) => {
+const ProjectItem = ({ data }) => {
   const [showModal, setShowModal] = useState(false)
 
   const closeModal = () => {
@@ -23,7 +23,7 @@ const ProjectItem = ({ post }) => {
     <div className={Classes.projectItem}>
       <div className={Classes.imageContainer}>
         <Img
-          fluid={post.node.frontmatter.galleryImages[0]}
+          fluid={data.images[0].image.fluid}
           className={Classes.image}
         />
       </div>
@@ -35,7 +35,7 @@ const ProjectItem = ({ post }) => {
           </button>
         </div>
       </div>
-      <AsyncModal post={post} show={showModal} closeModal={closeModal} />
+      <AsyncModal data={data} show={showModal} closeModal={closeModal} />
     </div>
   )
 }

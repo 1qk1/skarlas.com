@@ -30,6 +30,7 @@ const customStyles = {
 }
 
 const ProjectModal = props => {
+  const { data } = props
   return (
     <Modal
       onRequestClose={props.closeModal}
@@ -40,9 +41,9 @@ const ProjectModal = props => {
       <div className={Classes.modalContainer}>
         <div className={Classes.projectImage}>
           <Slider>
-            {props.post.node.frontmatter.galleryImages.map((image, index) => (
+            {data.images.map((image, index) => (
               <div className={Classes.imageContainer} key={`image-${index}`}>
-                <Img fluid={image} className={Classes.image} />
+                <Img fluid={image.image.fluid} className={Classes.image} />
               </div>
             ))}
           </Slider>
@@ -55,16 +56,16 @@ const ProjectModal = props => {
           />
           <div className={Classes.projectInfo__header}>
             <h2 className={Classes.projectInfo__title}>
-              {props.post.node.frontmatter.title}
+              {data.title.text}
             </h2>
             <div className={Classes.projectInfo__tech}>
-              {props.post.node.frontmatter.technologies &&
-                props.post.node.frontmatter.technologies.map((techItem, i) => (
+              {data.technologies &&
+                data.technologies.map((techItem, i) => (
                   <span
                     key={`tech-${i}`}
                     className={Classes.projectInfo__techItem}
                   >
-                    {techItem}
+                    {techItem.tag}
                   </span>
                 ))}
             </div>
@@ -73,14 +74,14 @@ const ProjectModal = props => {
             <h4 className={Classes.projectInfo__title}>ABOUT</h4>
             <div
               className={Classes.projectInfo__description}
-              dangerouslySetInnerHTML={{ __html: props.post.node.html }}
+              dangerouslySetInnerHTML={{ __html: data.description.html }}
             ></div>
           </div>
           <div className={Classes.projectInfo__footer}>
             <div className={Classes.projectLinks}>
               <a
                 className={`button ${Classes.projectLink}`}
-                href={props.post.node.frontmatter.url}
+                href={data.page_url.url}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -89,7 +90,7 @@ const ProjectModal = props => {
               </a>
               <a
                 className={`button ${Classes.projectLink}`}
-                href={props.post.node.frontmatter.github}
+                href={data.github_url.url}
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -35,13 +35,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content`,
-        name: `projects`,
-      },
-    },
-    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
@@ -57,7 +50,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-remark-copy-linked-files`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -72,7 +64,6 @@ module.exports = {
         icon: `src/images/sk-initials.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-robots-txt",
@@ -93,6 +84,18 @@ module.exports = {
             host: null,
           },
         },
+      },
+    },
+    {
+      resolve: `gatsby-source-prismic`,
+      options: {
+        repositoryName: `skarlas-blog`,
+        accessToken: `${process.env.API_KEY}`,
+        linkResolver: () => (post) => `/${post.uid}`,
+        schemas: {
+          "blog-post": require('./src/schemas/blog-post.json'),
+          "projects": require('./src/schemas/project.json'),
+        }
       },
     },
     {

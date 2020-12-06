@@ -5,7 +5,7 @@ import Classes from "./index.module.scss"
 
 const IndexPage = () => (
   <div className="page__content">
-    <SEO title="Home" keywords={[`portfolio`, `Παναγιωτης`, `Σκαρλας`]} />
+    <SEO title="Home" keywords={[`portfolio`, `Panagiotis`, `Skarlas`]} />
     <div className={`container ${Classes.container}`}>
       <div className={Classes.hero}>
         <h1 className={Classes.heroTitle}>

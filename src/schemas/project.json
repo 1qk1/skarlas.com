@@ -1,0 +1,76 @@
+{
+  "Main": {
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+        "label": "Title",
+        "placeholder": "My project"
+      }
+    },
+    "date": {
+      "type": "Date",
+      "config": {
+        "label": "date"
+      }
+    },
+    "order": {
+      "type": "Number",
+      "config": {
+        "label": "Order"
+      }
+    },
+    "images": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "image": {
+            "type": "Image",
+            "config": {
+              "constraint": {},
+              "thumbnails": [],
+              "label": "image"
+            }
+          }
+        },
+        "label": "Images"
+      }
+    },
+    "technologies": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "tag": {
+            "type": "Text",
+            "config": {
+              "label": "tag"
+            }
+          }
+        },
+        "label": "Technologies Used"
+      }
+    },
+    "description": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+        "label": "Description",
+        "placeholder": "This is my project"
+      }
+    },
+    "github_url": {
+      "type": "Link",
+      "config": {
+        "allowTargetBlank": true,
+        "label": "Github URL"
+      }
+    },
+    "page_url": {
+      "type": "Link",
+      "config": {
+        "allowTargetBlank": true,
+        "label": "Page URL"
+      }
+    }
+  }
+}

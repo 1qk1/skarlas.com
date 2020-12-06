@@ -16,6 +16,46 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
+exports.createPages = async function ({ actions, graphql }) {
+  const { data } = await graphql(`
+    query {
+      allPrismicBlogPost {
+        edges {
+          node {
+            id
+            data {
+              content {
+                html
+              }
+              title {
+                text
+              }
+              date_posted
+              header_image {
+                alt
+                fluid {
+                  src
+                  srcSet
+                  srcSetWebp
+                }
+              }
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+  data.allPrismicBlogPost.edges.forEach(node => {
+    const pageData = node.node.data
+    actions.createPage({
+      path: `blog/${pageData.slug}`,
+      component: require.resolve(`./src/templates/blog-post.js`),
+      context: { slug: pageData.slug, title: pageData.title, content: pageData.content, image: pageData.header_image},
+    })
+  })
+}
+
 exports.onCreateWebpackConfig = ({
   stage,
   getConfig,
