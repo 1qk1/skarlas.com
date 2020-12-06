@@ -9,10 +9,12 @@ const IndexPage = () => (
     <div className={`container ${Classes.container}`}>
       <div className={Classes.hero}>
         <h1 className={Classes.heroTitle}>
-          <span>Hi, I'm Panagiotis,</span>
-          <span>a frontend web developer.</span>
-          <span>I like building things with code, electronics or both.</span>
+          Hi, I'm Panagiotis,<br/>
+          a frontend web developer.
         </h1>
+        <h2 className={Classes.heroTitle}>
+          I like building things with code, electronics or both.
+        </h2>
       </div>
     </div>
   </div>

@@ -1,13 +1,12 @@
-span {
-  display: block;
-}
-
 .hero {
   width: 100%;
   max-width: 500px;
   transform: translateY(-50%);
   &Title {
     text-align: center;
+    font-weight: 600;
+    font-size: 2em;
+    margin-bottom: 0;
   }
   @media (max-width: 750px) {
     &Title {
