@@ -68,11 +68,11 @@ const About = () => (
                   </span>
                 </a>
 
-                <a
+                {/* <a
                   href="tel:+30 6945082981"
                 >
                 <IoIosCall className={Classes.contactIcon} />
-                +30 6945082981</a>
+                +30 6945082981</a> */}
               </div>
             </div>
           </div>
