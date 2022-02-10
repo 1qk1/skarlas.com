@@ -22,7 +22,7 @@
     "gatsby-source-prismic": "^3.2.1",
     "gatsby-transformer-remark": "^2.6.37",
     "gatsby-transformer-sharp": "^2.3.5",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
