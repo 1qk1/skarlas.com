@@ -10,6 +10,7 @@ class Layout extends Component {
     const { location, children } = this.props
     return (
       <>
+        <script async defer src="https://analytics.umami.is/script.js" data-website-id="52e36515-1404-4379-acb0-55046f0e54fe"></script>
         <Header />
         <main>
           <Transition location={location}>{children}</Transition>

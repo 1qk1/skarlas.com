@@ -12,7 +12,6 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
-        <script async defer src="https://analytics.umami.is/script.js" data-website-id="52e36515-1404-4379-acb0-55046f0e54fe"></script>
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
