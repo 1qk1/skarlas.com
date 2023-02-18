@@ -51,7 +51,7 @@ exports.createPages = async function ({ actions, graphql }) {
     actions.createPage({
       path: `blog/${pageData.slug}`,
       component: require.resolve(`./src/templates/blog-post.js`),
-      context: { slug: pageData.slug, title: pageData.title, content: pageData.content, image: pageData.header_image},
+      context: { slug: pageData.slug, title: pageData.title, content: pageData.content, image: pageData.header_image },
     })
   })
 }
