@@ -54,13 +54,15 @@ function SEO({ description, lang, meta, keywords, title }) {
               .concat(
                 keywords.length > 0
                   ? {
-                      name: `keywords`,
-                      content: keywords.join(`, `),
-                    }
+                    name: `keywords`,
+                    content: keywords.join(`, `),
+                  }
                   : []
               )
               .concat(meta)}
-          />
+          >
+            <script async defer src="https://analytics.umami.is/script.js" type="text/javascript" data-website-id="52e36515-1404-4379-acb0-55046f0e54fe"></script>
+          </Helmet>
         )
       }}
     />
