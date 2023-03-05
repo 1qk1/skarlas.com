@@ -61,7 +61,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               )
               .concat(meta)}
           >
-            <script defer data-domain="skarlas.com" src="https://plausible.cap.skarlas.com/js/script.js"></script>
+            {process.browser && <script defer data-domain="skarlas.com" src="https://plausible.cap.skarlas.com/js/script.js"></script>}
           </Helmet>
         )
       }}
