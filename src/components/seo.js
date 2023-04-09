@@ -61,7 +61,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               )
               .concat(meta)}
           >
-            {process.browser && <script defer data-domain="skarlas.com" src="https://plausible.cap.skarlas.com/js/script.js"></script>}
+            {process.browser && <script async defer data-website-id="c64f1351-db04-4a6b-95eb-3f26b383a1aa" src="https://umami.cap.skarlas.com/umami.js"></script>}
           </Helmet>
         )
       }}
